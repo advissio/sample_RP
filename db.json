@@ -1,0 +1,106 @@
+{
+  "direzioni": [
+	{
+		"direzione":	AA
+	},
+	{
+		"direzione":	HC
+	},
+	{
+		"direzione":	AB
+	},
+	{
+		"direzione":	A3
+	},
+	{
+		"direzione":	A5
+	},
+	{
+		"direzione":	AD
+	},
+	{
+		"direzione":	01
+	},
+	{
+		"direzione":	AP
+	},
+	{
+		"direzione":	BF
+	},
+	{
+		"direzione":	BV
+	},
+	{
+		"direzione":	BJ
+	},
+	{
+		"direzione":	CA
+	},
+	{
+		"direzione":	CE
+	},
+	{
+		"direzione":	ED
+	},
+	{
+		"direzione":	DA
+	},
+	{
+		"direzione":	DG
+	},
+	{
+		"direzione":	DL
+	},
+	{
+		"direzione":	DR
+	},
+	{
+		"direzione":	EK
+	},
+	{
+		"direzione":	FB
+	},
+	{
+		"direzione":	FE
+	},
+	{
+		"direzione":	ZX
+	},
+	{
+		"direzione":	ET
+	},
+	{
+		"direzione":	FM
+	},
+	{
+		"direzione":	G3
+	},
+	{
+		"direzione":	FR
+	},
+	{
+		"direzione":	GA
+	},
+	{
+		"direzione":	KK
+	},
+	{
+		"direzione":	UU
+	},
+	{
+		"direzione":	VV
+	},
+	{
+		"direzione":	WW
+	},
+	{
+		"direzione":	YY
+	},
+	{
+		"direzione":	01
+	}
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
