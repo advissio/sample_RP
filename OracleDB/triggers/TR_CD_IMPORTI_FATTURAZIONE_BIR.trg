@@ -1,0 +1,38 @@
+CREATE OR REPLACE TRIGGER VENCD.TR_CD_IMPORTI_FATTURAZIONE_BIR BEFORE INSERT ON VENCD.CD_IMPORTI_FATTURAZIONE FOR EACH ROW
+DECLARE
+
+v_nextval NATURAL;
+
+BEGIN
+   -- TRIGGER DI IMPLEMENTAZIONE DI BUSINESS RULES
+   -- CREAZIONE: Roberto Barbaro, Teoresi, Giugno 2009
+   -- ----------------------------------------------------------------------------------------
+
+
+   -- 1) MESSA IN SICUREZZA DEL TRIGGER: Registro attivazione
+   PA_TRIGGER.INIZIA('IMPORTI_FATTURAZIONE_BIR');
+   -- 2) Business Rule 1): gestione Timestamp su operazioni di modifica (SEMPRE ESEGUITA!)
+
+      SELECT CD_IMPORTI_FATTURAZIONE_SEQ.NEXTVAL
+      INTO v_nextval
+     FROM DUAL;
+     
+      PA_CD_ORDINE.PR_IMPOSTA_FLG_MODIFICA_ORDINE(:NEW.ID_ORDINE, 'S');
+
+
+     :NEW.ID_IMPORTI_FATTURAZIONE := v_nextval;
+   -- 3) MESSA IN SICUREZZA DEL TRIGGER: Registro corretta terminazione
+   PA_TRIGGER.CONCLUDI('IMPORTI_FATTURAZIONE_BIR');
+
+EXCEPTION
+   WHEN OTHERS THEN
+      -- MESSA IN SICUREZZA DEL TRIGGER: Registro terminazione
+      PA_TRIGGER.CONCLUDI('IMPORTI_FATTURAZIONE_BIR');
+      -- TRASMETTO ECCEZIONE AL PROCESSO SCATENANTE
+      RAISE;
+END;
+/
+
+
+
+
