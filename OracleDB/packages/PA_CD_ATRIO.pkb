@@ -41,6 +41,8 @@ PROCEDURE PR_INSERISCI_ATRIO( p_desc_atrio              CD_ATRIO.DESC_ATRIO%TYPE
                               p_esito                    OUT NUMBER)
 IS
 --
+v_vix   varchar2(10);
+
 BEGIN -- PR_INSERISCI_ATRIO
    p_esito     := 1;
 --P_ID_ATRIO := ATRIO_SEQ.NEXTVAL;
